@@ -1,42 +1,151 @@
+:root {
+  /*font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 16px;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;*/
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 #root {
-  max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* CSS Message */
+.messageBox {
+  border: 3px black solid;
+  border-radius: 12px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.messageList {
+  border: 1px rgb(159, 94, 184) solid;
+  border-radius: 4px;
+  padding: 0 8px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.message {
+  border: 1px gray solid;
+  border-radius: 4px;
+  padding: 4px 8px;
+  margin: 8px 0;
+  text-align: left;
 }
 
-.card {
-  padding: 2em;
+.message .author {
+  font-weight: bold;
 }
 
-.read-the-docs {
-  color: #888;
+.message .text {
+  font-style: italic;
+}
+
+.messageForm {
+  border: 1px rgb(226, 91, 161) solid;
+  border-radius: 4px;
+  padding: 4px 8px;
+}
+
+.messageForm form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.messageForm form input {
+  font-size: 16px;
+  text-align: center;
+}
+
+/* CSS Tâches */
+.todoApp {
+  border: 1px gray solid;
+  padding: 8px;
+  display: flex;
+  flex-direction: row;
+}
+
+.todoApp .todoApp-left,
+.todoApp .todoApp-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.todoApp .todoApp-left {
+  width: 30%;
+}
+
+.todoApp .todoApp-right {
+  width: 70%;
+}
+
+.todoForm {
+  border: 2px red solid;
+  height: 40vh;
+}
+
+.todoForm form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px;
+}
+
+.todoStats {
+  border: 2px #b31bb3 solid;
+  height: 40vh;
+}
+
+.todoFilters {
+  border: 2px orange solid;
+  height: 15vh;
+}
+
+.todoFilters > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.todoList {
+  border: 2px #287fb9 solid;
+  height: 65vh;
+  padding: 12px;
+  overflow: auto;
+}
+
+.todoList > div {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.todo {
+  border: 2px #16a316 solid;
+  padding: 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.todo .todo-left {
+  max-width: 60%;
+  text-align: left;
+}
+
+.todo .todo-right {
+  text-align: right;
 }
